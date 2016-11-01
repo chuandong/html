@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="./js/jquery-3.1.1.js"></script>
+    <style media="screen">
+      .selected {color: blue;}
+      .highlight {background: yellow;}
+    </style>
+    <script>
+      $(function(){
+        $("#btn").click(function(){
+          $("p").last().addClass("selected");
+          $("p").first().addClass(function(index,currentClass){
+            console.log(currentClass);
+            var myred;
+            if(currentClass == "selected"){
+              myred = "highlight";
+              $("div").text("第一个p标签字体改为蓝色，背景为黄色.")
+            }
+            return myred;
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p class="selected">hello</p>
+    <p>and</p>
+    <p>goodbye</p>
+    <div></div>
+    <button type="button" name="button" id="btn">变色</button>
+  </body>
+</html>

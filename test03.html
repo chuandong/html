@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jqurey.min.js"></script>
+    <script>
+          document.open();
+      document.write('测试开始.....................');
+          document.close();
+    </script>
+    <script>
+      $(function(){
+        alert('DOM资源已经加载完毕！');
+      })
+    </script>
+  </head>
+  <body onload="alert('body on load!');">
+    <div id="content">
+      <div></div>
+    </div>
+    <script>
+      window.onload = function(){
+        alert('页面全部资源加载完成！');
+      };
+      document.write('测试结束..............');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="./js/jquery-3.1.1.js"></script>
+    <script>
+      $(document).ready(function(){
+        // insertAfter 和 after 正好是反过来的 after是将B插入到A后面 insertAfter是将A插入到B后面
+        // $("<b>你好</b>").insertAfter("p");
+        // $("p").after("<b>你好！</b>");
+        // $("p").before("<b>你好！</b>");
+        // $("<b>你好！</b>").insertBefore("p");//before和after原理是一样的，一个是插前面，一个是插后面
+        $('#btn').click(function(){
+          $('#new').replaceWith(function(index){
+            console.log(index);
+            console.log($(this).contents());
+            return $('#name').html($(this).contents()) + $('p.new').css('border','1px solid red')  ;
+          });
+        // $('#name').html($('#new').contents());
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- <p>我想说：</p> -->
+    <div class="new">len</div>
+    <p class="new">h5</p>
+    <div id="new">beijing</div>
+    <p id="name"></p>
+    <button type="button" name="button" id="btn">替换</button>
+  </body>
+</html>

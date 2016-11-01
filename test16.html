@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="./js/jquery-3.1.1.js"></script>
+  </head>
+  <body>
+    <p>结果：</p>
+
+    <script>
+      var $p = jQuery("p"),
+          p = $p[0];
+
+      $p.append("1."+ jQuery.hasData(p) + " ");
+      $.data(p,"testing",123);
+
+      $p.append("2."+jQuery.hasData(p) + " ");
+      $.removeData(p,"testing");
+
+      $p.append("3." + jQuery.hasData(p) + " ");
+      $p.on('click',function(){});
+
+      $p.append("4." + jQuery.hasData(p) + " ");
+      $p.off('click');
+
+      $p.append("5." + jQuery.hasData(p) + " ");
+
+
+    </script>
+  </body>
+</html>

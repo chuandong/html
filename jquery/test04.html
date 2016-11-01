@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="./jquery-ui/jquery-3.1.1.min.js"></script>
+    <script src="./jquery-ui/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="./jquery-ui/jquery-ui.min.css" type="text/css">
+    <style>
+      ul {
+        list-style: none;
+      }
+    </style>
+    <script>
+      $(function(){
+        $("#ulid").sortable({delay: 1});
+      })
+    </script>
+  </head>
+  <body>
+    <ul id="ulid">
+      <li>11111</li>
+      <li>22222</li>
+      <li>33333</li>
+      <li>44444</li>
+    </ul>
+  </body>
+</html>

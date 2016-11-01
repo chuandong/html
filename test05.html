@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      section {
+        width: 300px;
+        height: 300px;
+        border: 1px solid red;
+      }
+    </style>
+    <script src="./js/jquery-3.1.1.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("section").bind("mousemove",sectionmove);
+      });
+
+      function sectionmove(event){
+        // console.log(event);
+        console.log(event.pageX + "," + event.pageY);
+        console.log(event.offsetX + "," + event.offsetY);
+      }
+    </script>
+  </head>
+  <body>
+    <section>
+      你的回话凌乱着，在这个时刻，我想起喷泉旁的白鸽，甜蜜散落了，情绪莫名的拉扯，我还爱你呢，伴你断断续续唱着歌，假作没事了，
+      时间过了，走了，爱情面临选择，你冷了，倦了，我哭了，一开始都不快乐，你用卡片纸写着，有些爱只给到这，真的懂了。
+    </section>
+  </body>
+</html>

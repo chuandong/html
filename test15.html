@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="./js/jquery-3.1.1.js"></script>
+    <style media="screen">
+      div {
+        border: 1px solid black;
+        display: inline;
+      }
+
+      span {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div>现在最流行的技术html<span></span>,现在前后端都能开发的工程叫：<span></span>.这就是技术的变革，时代的进步</div>
+    <script>
+      $("div").data("cool",{num: 5, name: "fullstack developer 全站开发工程师"});
+      $("span:first").text($("div").data("cool").num);
+      $("span:last").text($("div").data("cool").name);
+    </script>
+  </body>
+</html>

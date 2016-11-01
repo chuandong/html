@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="./js/jquery-3.1.1.js"></script>
+    <style>
+      div{
+        margin: 20px;
+        padding: 10px;
+        border: 1px solid black;
+        height: auto;
+        width: auto;
+        border-radius: 3px;
+        float: left;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div><img id="html"></div>
+    <div><img id="logo" title="old title!"></div>
+    <div id="text"></div>
+
+    <script>
+      $('#html').attr({
+        src: "http://t12.baidu.com/it/u=2119417536,2423412747&fm=72",
+        alt: "html logo",
+      });
+
+      $("#logo").attr("title",function(index,attr){
+        $(this).attr({
+          src: "http://img2.imgtn.bdimg.com/it/u=2790516019,3365443955&fm=21&gp=0.jpg",
+          alt: "cainiao logo",
+        });
+        console.log(index);
+        console.log(attr);
+        return index + "-" + attr + "- photo by logo.";
+      });
+
+      $("#text").text($("#logo").attr("title"));
+
+    </script>
+  </body>
+</html>

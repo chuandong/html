@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="./js/jquery-3.1.1.js"></script>
+    <style>
+      body div{
+        width: 100px;
+        height: 100px;
+        background: gray;
+        float: left;
+        margin: 10px;
+      }
+
+      body div div {
+        width: 20px;
+        height: 20px;
+        background: lightgray;
+      }
+    </style>
+    <script>
+      $(document).ready(function(){
+        //$("div:even").css("background","red");//不管层级，有多少个就是多少个
+        //$("div:odd").css("background","green");
+        $("div:eq(3)").css("background","red");
+      });
+    </script>
+  </head>
+  <body>
+    <div>这是第一个div
+      <div>1</div>
+      <div>2</div>
+    </div>
+    <div>这是第一个div
+      <div>1</div>
+      <div>2</div>
+    </div>
+    <div>这是第一个div
+      <div>1</div>
+      <div>2</div>
+    </div>
+    <div>这是第一个div
+      <div>1</div>
+      <div>2</div>
+    </div>
+  </body>
+</html>

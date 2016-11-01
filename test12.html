@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="./js/jquery-3.1.1.js"></script>
+    <script>
+      $(function(){
+        // var flag = 0;//1表示可以增加
+        var newElem = $("<div></div>").css('border','1px solid red');
+        $('#new').wrap(newElem);
+        $('#add').attr('disabled',true);
+
+        $('#delete').click(function(){
+          // if(!flag){
+          //   $('#new').unwrap();
+          //   flag = 1;
+          // }
+          $('#new').unwrap();
+          $('#add').attr('disabled',false);
+          $(this).attr('disabled',true);
+        });
+
+        $('#add').click(function(){
+          // if(flag){
+          //   $('#new').wrap(newElem);
+          //   flag = 0;
+          // }
+          $('#new').wrap(newElem);
+          $('#delete').attr('disabled',false);
+          $(this).attr('disabled',true);
+        });
+      });
+
+    </script>
+  </head>
+  <body>
+    <div id="new">beijing</div>
+    <button type="button" name="button" id="add">增加红框</button>
+    <button type="button" name="button" id="delete">去掉红框</button>
+  </body>
+</html>

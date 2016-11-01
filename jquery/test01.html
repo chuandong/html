@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="./jquery-ui/jquery-3.1.1.min.js"></script>
+    <script src="./jquery-ui/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="./jquery-ui/jquery-ui.min.css" type="text/css">
+    <script>
+      $(function(){
+        $("#btn").button();
+        $("#btn,button").button({icons: {primary: "ui-icon-gear" }});
+        // $('button').click(function(){
+        //   event.preventDefault();
+        //   console.log('abc');
+        // });
+      });
+    </script>
+  </head>
+  <body>
+    <a href="http://www.newbieol.com" id="btn" class="">菜鸟在线</a>
+
+    <button>按钮</button>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="./js/jquery-3.1.1.js"></script>
+    <script>
+      $(function(){
+        var newElem1 = $('<div class="inner"></div>').css('border','1px solid red');
+        var newElem2 = $('<div class="inner"></div>').css('border','1px solid blue');
+        // $('.new').wrap(newElem);
+        $('.new').wrap(function(index){
+          console.log(index);
+          if(index % 2){
+            return newElem1;
+          }else {
+            return newElem2;
+          }
+        });
+
+        // $('.new').wrapInner(function(index){
+        //   if(index / 2){
+        //     return newElem1;
+        //   }else {
+        //     return newElem2;
+        //   }
+        // });
+
+      });
+    </script>
+  </head>
+  <body>
+    <div id="all">
+      <div class="new">lenLch</div>
+      <p class="new">pclass</p>
+      <!-- <div class="new">html5</div> -->
+
+      <!-- <div class="new">html5</div> -->
+      <div class="new">lenLch</div>
+      <p class="new">pclass</p>
+      <div class="new">lenLch</div>
+      <p class="new">pclass</p>
+      <div class="new">lenLch</div>
+      <p class="new">pclass</p>
+      <div id="new">beijing</div>
+    </div>
+  </body>
+</html>
